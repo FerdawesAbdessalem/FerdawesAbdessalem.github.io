@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ferdaoues Abdessalem — Software Engineer</title>
+  <meta name="description" content="Ferdaoues Abdessalem — Ingénieure logiciel : Backend, Full Stack & QA. Symfony, Django, Angular, API REST, tests automatisés, CI/CD.">
+  <meta name="author" content="Ferdaoues Abdessalem">
+  <meta property="og:title" content="Ferdaoues Abdessalem — Software Engineer">
+  <meta property="og:description" content="Backend, Full Stack & QA — Symfony, Django, Angular, REST APIs, test automation, CI/CD.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Aller au contenu</a>
+
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="#top" aria-label="Ferdaoues Abdessalem">FA</a>
+      <nav class="nav" aria-label="Navigation">
+        <a href="#about" data-i18n="nav.about">Profil</a>
+        <a href="#skills" data-i18n="nav.skills">Compétences</a>
+        <a href="#experience" data-i18n="nav.experience">Expérience</a>
+        <a href="#projects" data-i18n="nav.projects">Projets</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="lang" role="group" aria-label="Langue / Language">
+        <button type="button" data-lang="fr">FR</button>
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="it">IT</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="wrap hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow" data-i18n="hero.location">Ispica, Italie · Ouverte à des postes en France, en Italie et dans l'UE</p>
+          <h1>Ferdaoues Abdessalem</h1>
+          <p class="role" data-i18n="hero.role">Ingénieure logiciel | Backend, Full Stack &amp; QA</p>
+          <p class="lead" id="about" data-i18n="hero.summary"></p>
+          <div class="actions">
+            <a class="btn primary" id="cv-link" href="cv/Ferdaoues_Abdessalem_CV_FR.pdf" download data-i18n="hero.cv">Télécharger le CV</a>
+            <a class="btn" href="#contact" data-i18n="hero.contact">Me contacter</a>
+          </div>
+          <ul class="social">
+            <li><a href="https://github.com/FerdawesAbdessalem" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/ferdawes-abdessalem" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="mailto:ferdwes621@gmail.com">ferdwes621@gmail.com</a></li>
+            <li><a href="tel:+393773121337">+39 377 312 1337</a></li>
+          </ul>
+        </div>
+        <div class="hero-photo">
+          <div class="avatar">
+            <img src="assets/photo.jpg" alt="Ferdaoues Abdessalem" width="320" height="320"
+                 onerror="this.remove()">
+            <span class="initials" aria-hidden="true">FA</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key figures -->
+    <section class="facts" aria-label="Chiffres clés">
+      <div class="wrap facts-grid" id="facts"></div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section" id="skills">
+      <div class="wrap">
+        <h2 data-i18n="skills.title">Compétences techniques</h2>
+        <div class="skills-grid" id="skills-grid"></div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section alt" id="experience">
+      <div class="wrap">
+        <h2 data-i18n="exp.title">Expérience professionnelle</h2>
+        <ol class="timeline" id="timeline"></ol>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <div class="wrap">
+        <h2 data-i18n="proj.title">Projets</h2>
+        <div class="cards" id="cards"></div>
+      </div>
+    </section>
+
+    <!-- Education & certifications -->
+    <section class="section alt" id="education">
+      <div class="wrap two-col">
+        <div>
+          <h2 data-i18n="edu.title">Formation</h2>
+          <ul class="list" id="edu"></ul>
+        </div>
+        <div>
+          <h2 data-i18n="cert.title">Certifications</h2>
+          <ul class="list" id="certs"></ul>
+          <h3 class="sub" data-i18n="lang.title">Langues</h3>
+          <p class="muted" id="languages"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact" id="contact">
+      <div class="wrap contact-inner">
+        <h2 data-i18n="contact.title">Travaillons ensemble</h2>
+        <p class="lead" data-i18n="contact.text"></p>
+        <div class="actions center">
+          <a class="btn primary" href="mailto:ferdwes621@gmail.com">ferdwes621@gmail.com</a>
+          <a class="btn" href="tel:+393773121337">+39 377 312 1337</a>
+          <a class="btn" href="https://www.linkedin.com/in/ferdawes-abdessalem" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="https://github.com/FerdawesAbdessalem" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">© <span id="year">2026</span> Ferdaoues Abdessalem</div>
+  </footer>
+
+  <noscript><p class="wrap">CV : <a href="cv/Ferdaoues_Abdessalem_CV_FR.pdf">FR</a> · <a href="cv/Ferdaoues_Abdessalem_Resume.pdf">EN</a> · <a href="cv/Ferdaoues_Abdessalem_CV_IT.pdf">IT</a></p></noscript>
+  <script src="content.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
