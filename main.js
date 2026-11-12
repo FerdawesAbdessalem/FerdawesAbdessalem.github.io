@@ -24,8 +24,10 @@
     const t = (key) => (C.ui[key] ? C.ui[key][lang] : key);
     document.documentElement.lang = lang;
 
+    // Texte manquant (ex. ancien fichier en cache) : on garde le texte déjà présent dans la page.
     document.querySelectorAll("[data-i18n]").forEach((el) => {
-      el.textContent = t(el.getAttribute("data-i18n"));
+      const entry = C.ui[el.getAttribute("data-i18n")];
+      if (entry && entry[lang]) el.textContent = entry[lang];
     });
     document.querySelectorAll("[data-lang]").forEach((b) => {
       b.setAttribute("aria-pressed", String(b.dataset.lang === lang));

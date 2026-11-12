@@ -55,3 +55,14 @@ git add .
 git commit -m "Mise à jour"
 git push
 ```
+
+## Avant chaque mise en ligne (important)
+
+Après avoir modifié un fichier `.css` ou `.js`, lancer une fois :
+
+```bash
+python version.py
+```
+
+Ce script met à jour les numéros `?v=...` dans `index.html`, pour que les visiteurs
+reçoivent tout de suite la nouvelle version au lieu d'un ancien fichier gardé en cache.
