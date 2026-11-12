@@ -3,85 +3,157 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ferdaoues Abdessalem — Software Engineer</title>
+  <title>Ferdaoues Abdessalem — Software Engineer | Backend, Full Stack & QA</title>
   <meta name="description" content="Ferdaoues Abdessalem — Ingénieure logiciel : Backend, Full Stack & QA. Symfony, Django, Angular, API REST, tests automatisés, CI/CD.">
   <meta name="author" content="Ferdaoues Abdessalem">
   <meta property="og:title" content="Ferdaoues Abdessalem — Software Engineer">
   <meta property="og:description" content="Backend, Full Stack & QA — Symfony, Django, Angular, REST APIs, test automation, CI/CD.">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="https://ferdawesabdessalem.github.io/assets/work/chalet/1.webp">
+  <meta name="theme-color" content="#070d1a">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <script>
+    /* thème choisi avant l'affichage, pour éviter un flash */
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("theme"); } catch (e) {}
+      if (t !== "light" && t !== "dark") t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.dataset.theme = t;
+      document.documentElement.classList.add("js");
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=e3b1d443">
-  <link rel="stylesheet" href="animations.css?v=a719cf83">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=b63e3076">
+  <link rel="stylesheet" href="animations.css?v=1aba511d">
 </head>
 <body>
   <a class="skip" href="#main" data-i18n="skip">Aller au contenu</a>
-  <div class="progress" aria-hidden="true"></div>
 
-  <header class="topbar">
-    <div class="wrap topbar-inner">
-      <a class="brand" href="#top" aria-label="Ferdaoues Abdessalem">FA</a>
+  <!-- ===== En-tête collant ===== -->
+  <header class="top">
+    <div class="wrap top-inner">
+      <a class="brand" href="#top" aria-label="Ferdaoues Abdessalem">fa<span>.</span></a>
       <nav class="nav" aria-label="Navigation">
-        <a href="#about" data-i18n="nav.about">Profil</a>
-        <a href="#skills" data-i18n="nav.skills">Compétences</a>
-        <a href="#experience" data-i18n="nav.experience">Expérience</a>
-        <a href="#projects" data-i18n="nav.projects">Projets</a>
-        <a href="#contact" data-i18n="nav.contact">Contact</a>
+        <a href="#work" data-i18n="nav.work">Projets</a>
+        <a href="#path" data-i18n="nav.path">Parcours</a>
+        <a href="#hire" data-i18n="nav.hire">Me recruter</a>
+        <span class="ink" aria-hidden="true"></span>
       </nav>
-      <div class="lang" role="group" aria-label="Langue / Language">
-        <button type="button" data-lang="fr">FR</button>
-        <button type="button" data-lang="en">EN</button>
-        <button type="button" data-lang="it">IT</button>
+      <div class="top-tools">
+        <button class="round" type="button" id="theme-btn" data-i18n-label="theme" aria-label="Changer de thème">
+          <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+          <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+        </button>
+        <a class="round txt" id="cv-top" href="cv/Ferdaoues_Abdessalem_CV_FR.pdf" target="_blank" rel="noopener" data-i18n="nav.cv">CV</a>
+        <div class="lang" role="group" aria-label="Langue / Language / Lingua">
+          <button type="button" data-lang="fr">FR</button>
+          <button type="button" data-lang="en">EN</button>
+          <button type="button" data-lang="it">IT</button>
+        </div>
       </div>
     </div>
+    <div class="progress" aria-hidden="true"><i></i></div>
   </header>
 
   <main id="main">
-    <!-- Hero -->
-    <section class="hero" id="top">
-      <div class="wrap hero-inner">
+    <!-- ===== Hero ===== -->
+    <section class="hero dark" id="top">
+      <canvas class="sky" aria-hidden="true"></canvas>
+      <div class="wrap hero-grid">
         <div class="hero-text">
-          <p class="eyebrow" data-i18n="hero.location">Ispica, Italie · Ouverte à des postes en France, en Italie et dans l'UE</p>
-          <h1>Ferdaoues Abdessalem</h1>
-          <p class="role" data-i18n="hero.role">Ingénieure logiciel | Backend, Full Stack &amp; QA</p>
-          <p class="typing" aria-hidden="true"><span class="prompt">&gt;</span> <span data-i18n="hero.typingPrefix">Je conçois</span> <span id="typing-text"></span><span class="caret"></span></p>
-          <p class="lead" id="about" data-i18n="hero.summary"></p>
-          <div class="actions">
-            <a class="btn primary" id="cv-link" href="cv/Ferdaoues_Abdessalem_CV_FR.pdf" download data-i18n="hero.cv">Télécharger le CV</a>
-            <a class="btn" href="#contact" data-i18n="hero.contact">Me contacter</a>
+          <p class="kicker rise" style="--d:0">
+            <img class="mini-avatar" src="assets/photo.jpg" alt="" width="44" height="44">
+            <span data-i18n="hero.kicker">Ferdaoues Abdessalem — ingénieure logiciel · Ispica, Italie</span>
+          </p>
+          <h1 class="headline" id="headline" data-i18n-split="hero.title">Je construis des API qui tiennent</h1>
+          <p class="typing rise" style="--d:5" aria-hidden="true"><span class="prompt">&gt;</span> <span data-i18n="hero.typingPrefix">Je conçois</span> <span id="typing-text"></span><span class="caret"></span></p>
+          <p class="lead rise" style="--d:6" data-i18n="hero.summary"></p>
+          <div class="actions rise" style="--d:7">
+            <a class="btn primary" href="#work"><span data-i18n="hero.work">Voir mes projets</span> <span class="arrow" aria-hidden="true">↓</span></a>
+            <a class="btn ghost" id="cv-link" href="cv/Ferdaoues_Abdessalem_CV_FR.pdf" target="_blank" rel="noopener" data-i18n="hero.cv">Lire le CV</a>
+            <span class="mail">
+              <a href="mailto:ferdwes621@gmail.com">ferdwes621@gmail.com</a>
+              <button type="button" class="copy" data-copy="ferdwes621@gmail.com" data-i18n-label="copy" aria-label="Copier l'adresse">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>
+              </button>
+            </span>
           </div>
-          <ul class="social">
-            <li><a href="https://github.com/FerdawesAbdessalem" target="_blank" rel="noopener">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/ferdawes-abdessalem" target="_blank" rel="noopener">LinkedIn</a></li>
-            <li><a href="mailto:ferdwes621@gmail.com">ferdwes621@gmail.com</a></li>
-            <li><a href="tel:+393773121337">+39 377 312 1337</a></li>
-          </ul>
+          <p class="status rise" style="--d:8"><i></i><span data-i18n="hero.status">Ouverte à des postes en France, en Italie et dans l'UE</span></p>
         </div>
-        <div class="hero-photo">
-          <div class="avatar-ring">
-            <div class="avatar">
-              <img src="assets/photo.jpg" alt="Ferdaoues Abdessalem" width="320" height="320"
-                   onerror="this.remove()">
-              <span class="initials" aria-hidden="true">FA</span>
-            </div>
+
+        <!-- Scène : ordinateur + téléphone + cartes flottantes -->
+        <div class="stage" aria-hidden="true">
+          <svg class="wires" viewBox="0 0 600 520" preserveAspectRatio="none">
+            <path id="w1" d="M470 120 C 420 170, 380 200, 330 250"/>
+            <path id="w2" d="M520 330 C 480 330, 450 320, 420 300"/>
+            <path id="w3" d="M120 420 C 140 380, 160 360, 200 340"/>
+          </svg>
+          <div class="float card-api" style="--fd:0s">
+            <small>API REST</small>
+            <span><b class="c1"></b>Symfony</span>
+            <span><b class="c2"></b>Django</span>
+            <span><b class="c3"></b>Angular</span>
+          </div>
+          <div class="float card-db" style="--fd:-2s">
+            <div class="cyl"><span>MySQL</span><span>PostgreSQL</span><span>MongoDB</span></div>
+          </div>
+          <div class="float card-tests" style="--fd:-4s">
+            <small>CI · tests</small>
+            <span class="ok">✓ unit</span>
+            <span class="ok">✓ integration</span>
+            <span class="ok">✓ e2e · Playwright</span>
+          </div>
+          <div class="laptop">
+            <div class="screen"><div class="mini-film" data-film-src="chalet"></div></div>
+            <div class="base"></div>
+          </div>
+          <div class="phone">
+            <div class="notch"></div>
+            <div class="screen"><div class="mini-film" data-film-src="secure"></div></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Key figures -->
-    <section class="facts" aria-label="Chiffres clés">
-      <div class="wrap facts-grid" id="facts"></div>
+    <!-- ===== Résultats en une phrase ===== -->
+    <section class="proof dark">
+      <div class="wrap">
+        <p class="proof-text" id="proof"></p>
+        <p class="clients-title" data-i18n="clients">Réalisé pour</p>
+        <ul class="clients" id="clients"></ul>
+      </div>
     </section>
 
-    <!-- CI/CD pipeline -->
-    <section class="section pipeline" id="pipeline">
+    <!-- ===== En un coup d'œil ===== -->
+    <section class="glance dark">
+      <div class="wrap">
+        <h2 class="big reveal" data-i18n="glance.title">En un coup d'œil</h2>
+        <dl class="glance-grid" id="glance"></dl>
+      </div>
+    </section>
+
+    <!-- ===== Projets ===== -->
+    <section class="work light" id="work">
+      <div class="wrap">
+        <h2 class="big reveal" data-i18n="work.title">Projets choisis</h2>
+        <div class="filters reveal">
+          <span class="filters-label" data-i18n="work.filter">Filtrer par techno</span>
+          <div class="chips" id="chips"></div>
+        </div>
+        <div id="cases"></div>
+        <h3 class="sub reveal" data-i18n="work.more">Autres projets</h3>
+        <div class="cards" id="cards"></div>
+      </div>
+    </section>
+
+    <!-- ===== Pipeline CI/CD ===== -->
+    <section class="pipeline dark" id="pipeline">
       <div class="wrap pipe-grid">
         <div class="pipe-text">
-          <h2 data-i18n="pipe.title">Du commit à la production</h2>
-          <p class="lead" data-i18n="pipe.text"></p>
+          <h2 class="big reveal" data-i18n="pipe.title">Du commit à la production</h2>
+          <p class="lead reveal" data-i18n="pipe.text"></p>
           <ol class="stages">
             <li class="stage"><span class="dot"></span><span data-i18n="pipe.s1">Commit</span></li>
             <li class="stage"><span class="dot"></span><span data-i18n="pipe.s2">Build</span></li>
@@ -90,75 +162,70 @@
             <li class="stage"><span class="dot"></span><span data-i18n="pipe.s5">Déploiement</span></li>
           </ol>
         </div>
-        <div class="terminal" aria-hidden="true">
+        <div class="terminal reveal" aria-hidden="true">
           <div class="term-bar"><i></i><i></i><i></i><span>ci-pipeline — bash</span></div>
           <div class="term-body"></div>
         </div>
       </div>
     </section>
 
-    <!-- Skills -->
-    <section class="section" id="skills">
+    <!-- ===== Parcours ===== -->
+    <section class="path dark" id="path">
       <div class="wrap">
-        <h2 data-i18n="skills.title">Compétences techniques</h2>
-        <div class="skills-grid" id="skills-grid"></div>
-      </div>
-    </section>
-
-    <!-- Experience -->
-    <section class="section alt" id="experience">
-      <div class="wrap">
-        <h2 data-i18n="exp.title">Expérience professionnelle</h2>
+        <h2 class="big reveal" data-i18n="path.title">Mon parcours</h2>
         <ol class="timeline" id="timeline"></ol>
+        <h3 class="sub reveal" data-i18n="cert.title">Certifications</h3>
+        <ul class="certs" id="certs"></ul>
       </div>
     </section>
 
-    <!-- Projects -->
-    <section class="section" id="projects">
-      <div class="wrap">
-        <h2 data-i18n="proj.title">Projets</h2>
-        <div class="cards" id="cards"></div>
-      </div>
-    </section>
-
-    <!-- Education & certifications -->
-    <section class="section alt" id="education">
-      <div class="wrap two-col">
+    <!-- ===== Me recruter ===== -->
+    <section class="hire light" id="hire">
+      <div class="wrap hire-grid">
         <div>
-          <h2 data-i18n="edu.title">Formation</h2>
-          <ul class="list" id="edu"></ul>
+          <h2 class="big reveal" data-i18n="hire.title">Me recruter</h2>
+          <p class="hire-kicker reveal" data-i18n="hire.kicker">Pour les recruteurs</p>
+          <p class="hire-lead reveal" data-i18n="hire.lead"></p>
+          <dl class="hire-table" id="hire-table"></dl>
+          <div class="actions reveal">
+            <a class="btn primary" href="cv/Ferdaoues_Abdessalem_CV_FR.pdf" target="_blank" rel="noopener" data-i18n="hire.cvfr">CV · français</a>
+            <a class="btn ghost" href="cv/Ferdaoues_Abdessalem_Resume.pdf" target="_blank" rel="noopener" data-i18n="hire.cven">CV · anglais</a>
+            <a class="btn ghost" href="cv/Ferdaoues_Abdessalem_CV_IT.pdf" target="_blank" rel="noopener" data-i18n="hire.cvit">CV · italien</a>
+          </div>
         </div>
-        <div>
-          <h2 data-i18n="cert.title">Certifications</h2>
-          <ul class="list" id="certs"></ul>
-          <h3 class="sub" data-i18n="lang.title">Langues</h3>
-          <p class="muted" id="languages"></p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="section contact" id="contact">
-      <div class="wrap contact-inner">
-        <h2 data-i18n="contact.title">Travaillons ensemble</h2>
-        <p class="lead" data-i18n="contact.text"></p>
-        <div class="actions center">
-          <a class="btn primary" href="mailto:ferdwes621@gmail.com">ferdwes621@gmail.com</a>
-          <a class="btn" href="tel:+393773121337">+39 377 312 1337</a>
-          <a class="btn" href="https://www.linkedin.com/in/ferdawes-abdessalem" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="btn" href="https://github.com/FerdawesAbdessalem" target="_blank" rel="noopener">GitHub</a>
-        </div>
+        <figure class="hire-photo reveal">
+          <div class="ring"><img src="assets/photo.jpg" alt="Ferdaoues Abdessalem" width="320" height="320" loading="lazy"></div>
+        </figure>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="wrap">© <span id="year">2026</span> Ferdaoues Abdessalem</div>
+  <!-- ===== Contact ===== -->
+  <footer class="contact dark" id="contact">
+    <div class="wrap">
+      <h2 class="huge reveal" data-i18n="contact.title">Travaillons ensemble</h2>
+      <p class="lead reveal" data-i18n="contact.text"></p>
+      <div class="actions reveal">
+        <a class="btn primary" href="mailto:ferdwes621@gmail.com">ferdwes621@gmail.com</a>
+        <a class="btn ghost" href="tel:+393773121337">+39 377 312 1337</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/ferdawes-abdessalem" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn ghost" href="https://github.com/FerdawesAbdessalem" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <p class="copyright">© <span id="year">2026</span> Ferdaoues Abdessalem</p>
+    </div>
   </footer>
 
+  <!-- Visionneuse plein écran -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button type="button" class="lb-close" data-i18n-label="close" aria-label="Fermer">×</button>
+    <button type="button" class="lb-nav lb-prev" data-i18n-label="film.prev" aria-label="Écran précédent">‹</button>
+    <figure><img alt=""><figcaption></figcaption></figure>
+    <button type="button" class="lb-nav lb-next" data-i18n-label="film.next" aria-label="Écran suivant">›</button>
+  </div>
+
   <noscript><p class="wrap">CV : <a href="cv/Ferdaoues_Abdessalem_CV_FR.pdf">FR</a> · <a href="cv/Ferdaoues_Abdessalem_Resume.pdf">EN</a> · <a href="cv/Ferdaoues_Abdessalem_CV_IT.pdf">IT</a></p></noscript>
-  <script src="content.js?v=9f9a2ac7"></script>
-  <script src="main.js?v=3a0c90fc"></script>
-  <script src="animations.js?v=8935a2b6"></script>
+  <script src="content.js?v=7920ef12"></script>
+  <script src="main.js?v=d705f4b8"></script>
+  <script src="animations.js?v=b980ed9c"></script>
 </body>
 </html>

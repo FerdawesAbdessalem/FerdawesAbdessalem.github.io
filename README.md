@@ -8,11 +8,24 @@ Site statique (HTML / CSS / JS), trilingue FR · EN · IT, sans dépendance à i
 index.html     structure de la page (ne change presque jamais)
 style.css      couleurs, polices, mise en page
 content.js     TOUT LE TEXTE : profil, compétences, expériences, projets, certifs (FR/EN/IT)
-main.js        logique (changement de langue, affichage)
-assets/        photo.jpg (ta photo, carrée de préférence) + favicon.svg
+main.js        affichage (changement de langue, construction des sections)
+animations.js  animations (ciel, titre, films d'écrans, schémas, filtres, thème…)
+animations.css styles des animations
+assets/        photo.jpg, favicon.svg
+assets/logos/  logos « Réalisé pour »
+assets/work/   captures des projets (chalet/, synapsystem/, secure-appart/)
 cv/            les 3 CV PDF téléchargeables
 .nojekyll      fichier vide requis par GitHub Pages
 ```
+
+## Ajouter / changer un écran dans un « film » de projet
+
+1. Mettre l'image dans `assets/work/<projet>/` (ex. `assets/work/secure-appart/13.webp`, ou .jpg/.png).
+2. Dans `content.js`, section `cases`, ajouter une ligne dans `film.frames` à la position voulue :
+   ```js
+   ["assets/work/secure-appart/13.webp", { fr: "Légende", en: "Caption", it: "Didascalia" }],
+   ```
+   L'ordre des lignes = l'ordre du film.
 
 ## Modifier le contenu
 
