@@ -26,6 +26,27 @@ window.CONTENT = {
       en: "Software Engineer | Backend, Full Stack & QA",
       it: "Ingegnere del software | Backend, Full Stack e QA"
     },
+    /* Texte animé (machine à écrire) sous le titre */
+    "hero.typingPrefix": { fr: "Je conçois", en: "I build", it: "Realizzo" },
+    "hero.typing": {
+      fr: ["des API REST robustes", "des applications full stack", "des tests automatisés fiables", "des pipelines CI/CD", "des solutions pilotées par l'IA"],
+      en: ["robust REST APIs", "full-stack applications", "reliable automated tests", "CI/CD pipelines", "AI-powered solutions"],
+      it: ["API REST robuste", "applicazioni full stack", "test automatizzati affidabili", "pipeline CI/CD", "soluzioni basate sull'IA"]
+    },
+
+    /* Section « pipeline CI/CD » animée */
+    "pipe.title": { fr: "Du commit à la production", en: "From commit to production", it: "Dal commit alla produzione" },
+    "pipe.text": {
+      fr: "Ma façon de livrer : chaque changement passe par un pipeline automatisé — build, tests unitaires, d'intégration et end-to-end, rapport de qualité, puis déploiement.",
+      en: "How I ship: every change goes through an automated pipeline — build, unit, integration and end-to-end tests, a quality report, then deployment.",
+      it: "Il mio modo di rilasciare: ogni modifica passa da una pipeline automatizzata — build, test unitari, di integrazione ed end-to-end, report di qualità, poi rilascio."
+    },
+    "pipe.s1": { fr: "Commit", en: "Commit", it: "Commit" },
+    "pipe.s2": { fr: "Build", en: "Build", it: "Build" },
+    "pipe.s3": { fr: "Tests", en: "Tests", it: "Test" },
+    "pipe.s4": { fr: "Rapport QA", en: "QA report", it: "Report QA" },
+    "pipe.s5": { fr: "Déploiement", en: "Deploy", it: "Rilascio" },
+
     "hero.summary": {
       fr: "Ingénieure en développement logiciel, spécialisée dans la conception et le développement de solutions backend et full stack. Expérience en architecture et développement d'API REST, automatisation des tests et intégration continue (CI/CD), avec une maîtrise de plusieurs technologies et frameworks, notamment Symfony, Django et Angular.",
       en: "Software engineer specialised in designing and building backend and full-stack solutions. Experienced in REST API architecture and development, test automation and continuous integration (CI/CD), with hands-on command of several technologies and frameworks, including Symfony, Django and Angular.",

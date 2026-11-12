@@ -75,6 +75,7 @@
     $("#languages").textContent = C.languages[lang];
 
     observeReveal();
+    document.dispatchEvent(new CustomEvent("content:rendered"));
   }
 
   let observer;
