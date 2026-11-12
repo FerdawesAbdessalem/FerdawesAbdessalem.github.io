@@ -114,9 +114,12 @@
     function draw(move) {
       t++;
       ctx.clearRect(0, 0, w, h);
+      const light = root.dataset.theme !== "dark";
+      const star = light ? "60,80,140" : "220,230,255";
+      const net = light ? "91,75,214" : "139,125,255";
       for (const s of stars) {
         const a = .25 + .55 * (0.5 + 0.5 * Math.sin(s.p + t * s.s));
-        ctx.fillStyle = `rgba(220,230,255,${a})`;
+        ctx.fillStyle = `rgba(${star},${light ? a * .55 : a})`;
         ctx.fillRect(s.x, s.y, s.r, s.r);
       }
       for (const n of nodes) {
@@ -126,11 +129,11 @@
         const a = nodes[i];
         for (let j = i + 1; j < nodes.length; j++) {
           const b = nodes[j], dx = a.x - b.x, dy = a.y - b.y, d = Math.hypot(dx, dy);
-          if (d < 150) { ctx.strokeStyle = `rgba(139,125,255,${.16 * (1 - d / 150)})`; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke(); }
+          if (d < 150) { ctx.strokeStyle = `rgba(${net},${(light ? .22 : .16) * (1 - d / 150)})`; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke(); }
         }
         const md = Math.hypot(a.x - mouse.x, a.y - mouse.y);
         if (md < 190) { ctx.strokeStyle = `rgba(45,212,191,${.45 * (1 - md / 190)})`; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke(); }
-        ctx.fillStyle = md < 190 ? "rgba(45,212,191,.9)" : "rgba(160,170,255,.5)";
+        ctx.fillStyle = md < 190 ? "rgba(45,212,191,.9)" : (light ? "rgba(91,75,214,.45)" : "rgba(160,170,255,.5)");
         ctx.beginPath(); ctx.arc(a.x, a.y, 1.6, 0, 6.283); ctx.fill();
       }
       /* étoiles filantes */
@@ -151,6 +154,7 @@
     const start = () => { if (!running && !REDUCE) { running = true; raf = requestAnimationFrame(loop); } };
     const stop = () => { running = false; cancelAnimationFrame(raf); };
     size(); draw(false);
+    document.addEventListener("theme:changed", () => { if (!running) draw(false); });
     let rt;
     addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => { size(); draw(false); }, 150); });
     if (REDUCE) return;
@@ -466,6 +470,7 @@
       const t = root.dataset.theme === "dark" ? "light" : "dark";
       root.dataset.theme = t;
       try { localStorage.setItem("theme", t); } catch (e) { /* ignore */ }
+      document.dispatchEvent(new CustomEvent("theme:changed"));
       onScroll();
     });
   }
