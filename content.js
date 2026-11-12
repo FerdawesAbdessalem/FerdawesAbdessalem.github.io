@@ -15,6 +15,8 @@ window.CONTENT = {
     "nav.path":    { fr: "Parcours", en: "Path", it: "Percorso" },
     "nav.hire":    { fr: "Me recruter", en: "Hire me", it: "Assumimi" },
     "nav.cv":      { fr: "CV", en: "CV", it: "CV" },
+    "nav.contact": { fr: "Contact", en: "Contact", it: "Contatti" },
+    "menu":        { fr: "Menu", en: "Menu", it: "Menu" },
     "theme":       { fr: "Changer de thème", en: "Toggle theme", it: "Cambia tema" },
 
     "hero.kicker": {
@@ -33,10 +35,15 @@ window.CONTENT = {
       en: "Software engineer specialised in designing and building backend and full-stack solutions. Experienced in REST API architecture and development, test automation and continuous integration (CI/CD), with hands-on command of several technologies and frameworks, including Symfony, Django and Angular.",
       it: "Ingegnere dello sviluppo software, specializzata nella progettazione e nello sviluppo di soluzioni backend e full stack. Esperienza nell'architettura e nello sviluppo di API REST, nell'automazione dei test e nell'integrazione continua (CI/CD), con padronanza di diverse tecnologie e framework, tra cui Symfony, Django e Angular."
     },
+    "hero.lead": {
+      fr: "Ingénieure logiciel backend et full stack : API REST avec Symfony et Django, interfaces Angular, tests automatisés et CI/CD.",
+      en: "Backend and full-stack software engineer: REST APIs with Symfony and Django, Angular interfaces, automated testing and CI/CD.",
+      it: "Ingegnere del software backend e full stack: API REST con Symfony e Django, interfacce Angular, test automatizzati e CI/CD."
+    },
     "hero.status": {
-      fr: "Ouverte à des postes en France, en Italie et dans l'UE",
-      en: "Open to roles in France, Italy and across the EU",
-      it: "Disponibile per posizioni in Italia, Francia e nell'UE"
+      fr: "Disponible immédiatement · tous contrats · toute l'UE",
+      en: "Available now · any contract · anywhere in the EU",
+      it: "Disponibile da subito · qualsiasi contratto · in tutta l'UE"
     },
     "hero.work":   { fr: "Voir mes projets", en: "See the work", it: "Vedi i progetti" },
     "hero.cv":     { fr: "Lire le CV", en: "Read the CV", it: "Leggi il CV" },
@@ -51,9 +58,9 @@ window.CONTENT = {
     },
 
     "proof": {
-      fr: "En production chez AZERTY UI",
-      en: "Shipped to production at AZERTY UI",
-      it: "In produzione presso AZERTY UI"
+      fr: "Réalisations chez AZERTY UI",
+      en: "Work delivered at AZERTY UI",
+      it: "Realizzazioni presso AZERTY UI"
     },
     "clients":     { fr: "Réalisé pour", en: "Built for", it: "Realizzato per" },
 
@@ -98,9 +105,9 @@ window.CONTENT = {
 
     "contact.title": { fr: "Travaillons ensemble", en: "Let's work together", it: "Lavoriamo insieme" },
     "contact.text": {
-      fr: "Je suis disponible pour des postes d'ingénieure logiciel backend, full stack ou QA. Écrivez-moi, je réponds rapidement.",
-      en: "I'm available for backend, full-stack or QA software engineering roles. Write to me — I reply quickly.",
-      it: "Sono disponibile per posizioni di ingegnere del software backend, full stack o QA. Scrivetemi, rispondo rapidamente."
+      fr: "Disponible dès maintenant pour des postes d'ingénieure logiciel backend, full stack ou QA, partout dans l'UE. Écrivez-moi, je réponds rapidement.",
+      en: "Available now for backend, full-stack or QA software engineering roles anywhere in the EU. Write to me — I reply quickly.",
+      it: "Disponibile da subito per posizioni di ingegnere del software backend, full stack o QA in tutta l'UE. Scrivetemi, rispondo rapidamente."
     }
   },
 
@@ -131,17 +138,13 @@ window.CONTENT = {
   clients: [
     { name: "AZERTY UI", logo: "assets/logos/azertyui.webp", url: "https://azertyui.fr/", label: "AZERTY UI", dark: true },
     { name: "Chalet Montagne", logo: "assets/logos/chalet-montagne.svg", url: "https://www.chalet-montagne.com/", dark: true },
-    { name: "Synapsystem", logo: "assets/logos/synapsystem.svg", url: "https://synapsystem.azertyui.fr/", label: "Synapsystem" },
-    { name: "IT Station", label: "IT Station" },
-    { name: "Tunisie Telecom", label: "Tunisie Telecom" }
+    { name: "IT Station", label: "IT Station" }
   ],
 
   /* ---------- Tableau « En un coup d'œil » ---------- */
   glance: [
     { k: { fr: "Rôle", en: "Role", it: "Ruolo" },
       v: { fr: "Ingénieure logiciel — Backend, Full Stack & QA", en: "Software engineer — Backend, Full Stack & QA", it: "Ingegnere del software — Backend, Full Stack e QA" } },
-    { k: { fr: "Expérience", en: "Experience", it: "Esperienza" },
-      v: { fr: "AZERTY UI (France), févr. 2025 – nov. 2026 · stages IT Station et Tunisie Telecom", en: "AZERTY UI (France), Feb 2025 – Nov 2026 · internships at IT Station and Tunisie Telecom", it: "AZERTY UI (Francia), feb 2025 – nov 2026 · tirocini presso IT Station e Tunisie Telecom" } },
     { k: { fr: "Backend", en: "Backend", it: "Backend" },
       v: { fr: "Symfony · PHP · Django · Python · API REST", en: "Symfony · PHP · Django · Python · REST APIs", it: "Symfony · PHP · Django · Python · API REST" } },
     { k: { fr: "Frontend & mobile", en: "Frontend & mobile", it: "Frontend e mobile" },
@@ -155,13 +158,7 @@ window.CONTENT = {
     { k: { fr: "IA", en: "AI", it: "IA" },
       v: { fr: "LLM (Claude) · TensorFlow · scikit-learn · OCR", en: "LLM (Claude) · TensorFlow · scikit-learn · OCR", it: "LLM (Claude) · TensorFlow · scikit-learn · OCR" } },
     { k: { fr: "Formation", en: "Education", it: "Formazione" },
-      v: { fr: "Diplôme d'ingénieur en télécommunications, ENISo Sousse (2025)", en: "Telecommunications engineering degree, ENISo Sousse (2025)", it: "Laurea in Ingegneria delle Telecomunicazioni, ENISo Sousse (2025)" } },
-    { k: { fr: "Langues", en: "Languages", it: "Lingue" },
-      v: { fr: "Arabe (maternelle) · Français (C1) · Anglais (B1) · Italien (A2)", en: "Arabic (native) · French (C1) · English (B1) · Italian (A2)", it: "Arabo (madrelingua) · Francese (C1) · Inglese (B1) · Italiano (A2)" } },
-    { k: { fr: "Basée", en: "Based", it: "Sede" },
-      v: { fr: "Ispica, Italie (CET / UTC+1)", en: "Ispica, Italy (CET / UTC+1)", it: "Ispica, Italia (CET / UTC+1)" } },
-    { k: { fr: "Mobilité", en: "Open to", it: "Disponibilità" },
-      v: { fr: "France, Italie et Union européenne", en: "France, Italy and the European Union", it: "Italia, Francia e Unione europea" } }
+      v: { fr: "Diplôme d'ingénieur en télécommunications, ENISo Sousse (2025)", en: "Telecommunications engineering degree, ENISo Sousse (2025)", it: "Laurea in Ingegneria delle Telecomunicazioni, ENISo Sousse (2025)" } }
   ],
 
   /* ---------- Grands projets (avec « film » d'écrans) ----------
@@ -282,7 +279,7 @@ window.CONTENT = {
 
   /* Filtres des projets : id → libellé */
   stacks: {
-    symfony: "Symfony · PHP",
+    symfony: "PHP · Symfony",
     django:  "Python · Django",
     ai:      { fr: "IA", en: "AI", it: "IA" },
     mobile:  "Mobile · Flutter",
@@ -387,8 +384,12 @@ window.CONTENT = {
   hire: [
     { k: { fr: "Postes visés", en: "Roles I fit", it: "Ruoli" },
       v: { fr: "Développeuse backend (Symfony/PHP, Django/Python) · full stack (Angular) · QA / automatisation des tests", en: "Backend developer (Symfony/PHP, Django/Python) · full stack (Angular) · QA / test automation", it: "Sviluppatrice backend (Symfony/PHP, Django/Python) · full stack (Angular) · QA / automazione dei test" } },
+    { k: { fr: "Disponibilité", en: "Availability", it: "Disponibilità" },
+      v: { fr: "Immédiate", en: "Immediately", it: "Immediata" } },
+    { k: { fr: "Contrat", en: "Contract", it: "Contratto" },
+      v: { fr: "Tous types : CDI, CDD, freelance ou mission", en: "Any type: permanent, fixed-term, freelance or contract", it: "Qualsiasi tipo: tempo indeterminato, determinato, freelance o consulenza" } },
     { k: { fr: "Localisation", en: "Location", it: "Sede" },
-      v: { fr: "Basée à Ispica, Italie (UTC+1) · ouverte à la France, l'Italie et l'UE", en: "Based in Ispica, Italy (UTC+1) · open to France, Italy and the EU", it: "Con sede a Ispica, Italia (UTC+1) · disponibile per Italia, Francia e UE" } },
+      v: { fr: "Basée à Ispica, Italie (UTC+1) · mobile dans toute l'Union européenne", en: "Based in Ispica, Italy (UTC+1) · open to roles anywhere in the European Union", it: "Con sede a Ispica, Italia (UTC+1) · disponibile in tutta l'Unione europea" } },
     { k: { fr: "Langues de travail", en: "Working languages", it: "Lingue di lavoro" },
       v: { fr: "Français (C1) · anglais (B1) · italien (A2) · arabe", en: "French (C1) · English (B1) · Italian (A2) · Arabic", it: "Francese (C1) · inglese (B1) · italiano (A2) · arabo" } },
     { k: { fr: "Points forts", en: "Strengths", it: "Punti di forza" },

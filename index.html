@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=354a1583">
+  <link rel="stylesheet" href="style.css?v=36bf72ae">
   <link rel="stylesheet" href="animations.css?v=1aba511d">
 </head>
 <body>
@@ -35,10 +35,11 @@
   <header class="top">
     <div class="wrap top-inner">
       <a class="brand" href="#top" aria-label="Ferdaoues Abdessalem">fa<span>.</span></a>
-      <nav class="nav" aria-label="Navigation">
+      <nav class="nav" id="site-nav" aria-label="Navigation">
         <a href="#work" data-i18n="nav.work">Projets</a>
         <a href="#path" data-i18n="nav.path">Parcours</a>
         <a href="#hire" data-i18n="nav.hire">Me recruter</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
         <span class="ink" aria-hidden="true"></span>
       </nav>
       <div class="top-tools">
@@ -47,6 +48,9 @@
           <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
         </button>
         <a class="round txt" id="cv-top" href="cv/Ferdaoues_Abdessalem_CV_FR.pdf" target="_blank" rel="noopener" data-i18n="nav.cv">CV</a>
+        <button class="round menu-btn" type="button" id="menu-btn" aria-expanded="false" aria-controls="site-nav" data-i18n-label="menu" aria-label="Menu">
+          <span aria-hidden="true"></span>
+        </button>
         <div class="lang" role="group" aria-label="Langue / Language / Lingua">
           <button type="button" data-lang="fr">FR</button>
           <button type="button" data-lang="en">EN</button>
@@ -69,7 +73,7 @@
           </p>
           <h1 class="headline" id="headline" data-i18n-split="hero.title">Je construis des API qui tiennent</h1>
           <p class="typing rise" style="--d:5" aria-hidden="true"><span class="prompt">&gt;</span> <span data-i18n="hero.typingPrefix">Je conçois</span> <span id="typing-text"></span><span class="caret"></span></p>
-          <p class="lead rise" style="--d:6" data-i18n="hero.summary"></p>
+          <p class="lead rise" style="--d:6" data-i18n="hero.lead"></p>
           <div class="actions rise" style="--d:7">
             <a class="btn primary" href="#work"><span data-i18n="hero.work">Voir mes projets</span> <span class="arrow" aria-hidden="true">↓</span></a>
             <a class="btn ghost" id="cv-link" href="cv/Ferdaoues_Abdessalem_CV_FR.pdf" target="_blank" rel="noopener" data-i18n="hero.cv">Lire le CV</a>
@@ -225,8 +229,8 @@
   </div>
 
   <noscript><p class="wrap">CV : <a href="cv/Ferdaoues_Abdessalem_CV_FR.pdf">FR</a> · <a href="cv/Ferdaoues_Abdessalem_Resume.pdf">EN</a> · <a href="cv/Ferdaoues_Abdessalem_CV_IT.pdf">IT</a></p></noscript>
-  <script src="content.js?v=74fe41b9"></script>
+  <script src="content.js?v=17ae2b98"></script>
   <script src="main.js?v=ce9170e1"></script>
-  <script src="animations.js?v=52692b6d"></script>
+  <script src="animations.js?v=d02f56a9"></script>
 </body>
 </html>

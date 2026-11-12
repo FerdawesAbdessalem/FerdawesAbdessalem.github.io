@@ -475,6 +475,17 @@
     });
   }
 
+  /* ---------- 12b. Menu mobile ---------- */
+  function menu() {
+    const btn = document.getElementById("menu-btn");
+    if (!btn || !nav) return;
+    const set = (open) => { nav.classList.toggle("open", open); btn.setAttribute("aria-expanded", String(open)); };
+    btn.addEventListener("click", () => set(!nav.classList.contains("open")));
+    links.forEach((l) => l.addEventListener("click", () => set(false)));
+    addEventListener("keydown", (e) => { if (e.key === "Escape") set(false); });
+    document.addEventListener("click", (e) => { if (!nav.contains(e.target) && !btn.contains(e.target)) set(false); });
+  }
+
   /* ---------- 13. Copier l'adresse e-mail ---------- */
   function copy() {
     document.querySelectorAll("[data-copy]").forEach((b) => b.addEventListener("click", async () => {
@@ -499,6 +510,7 @@
   pipeline();
   magnetic();
   theme();
+  menu();
   copy();
   onRendered();
   document.addEventListener("content:rendered", onRendered);
