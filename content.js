@@ -24,9 +24,9 @@ window.CONTENT = {
     },
     /* Grand titre : chaque mot apparaît l'un après l'autre */
     "hero.title": {
-      fr: "Je construis des API qui tiennent",
-      en: "I build APIs that hold up",
-      it: "Costruisco API che reggono"
+      fr: "Du backend à l'interface",
+      en: "From backend to interface",
+      it: "Dal backend all'interfaccia"
     },
     "hero.summary": {
       fr: "Ingénieure en développement logiciel, spécialisée dans la conception et le développement de solutions backend et full stack. Expérience en architecture et développement d'API REST, automatisation des tests et intégration continue (CI/CD), avec une maîtrise de plusieurs technologies et frameworks, notamment Symfony, Django et Angular.",
@@ -51,9 +51,9 @@ window.CONTENT = {
     },
 
     "proof": {
-      fr: "Chez AZERTY UI : des **API REST Symfony** pour chalet-montagne.com, une plateforme de **milliers de chalets** ; des tests **unitaires, d'intégration et E2E** avec rapports Allure ; un backend Django qui **lit les dossiers locataires par OCR** ; et Synapsystem, une **cartographie métier générée par IA** avec Claude et Neo4j.",
-      en: "At AZERTY UI: **Symfony REST APIs** for chalet-montagne.com, a platform of **thousands of chalets**; **unit, integration and E2E** tests with Allure reports; a Django backend that **reads tenant files with OCR**; and Synapsystem, an **AI-generated business map** built with Claude and Neo4j.",
-      it: "In AZERTY UI: **API REST Symfony** per chalet-montagne.com, una piattaforma con **migliaia di chalet**; test **unitari, di integrazione ed E2E** con report Allure; un backend Django che **legge i fascicoli degli inquilini con l'OCR**; e Synapsystem, una **mappa aziendale generata dall'IA** con Claude e Neo4j."
+      fr: "En production chez AZERTY UI",
+      en: "Shipped to production at AZERTY UI",
+      it: "In produzione presso AZERTY UI"
     },
     "clients":     { fr: "Réalisé pour", en: "Built for", it: "Realizzato per" },
 
@@ -110,6 +110,22 @@ window.CONTENT = {
     en: "cv/Ferdaoues_Abdessalem_Resume.pdf",
     it: "cv/Ferdaoues_Abdessalem_CV_IT.pdf"
   },
+
+  /* ---------- Réalisations clés (4 cartes sous le hero) ---------- */
+  proof: [
+    { k: "API", c: "violet",
+      t: { fr: "API REST Symfony", en: "Symfony REST APIs", it: "API REST Symfony" },
+      d: { fr: "Pour chalet-montagne.com, une plateforme de milliers de chalets.", en: "For chalet-montagne.com, a platform of thousands of chalets.", it: "Per chalet-montagne.com, una piattaforma con migliaia di chalet." } },
+    { k: "QA", c: "teal",
+      t: { fr: "Tests automatisés", en: "Automated testing", it: "Test automatizzati" },
+      d: { fr: "Unitaires, d'intégration et E2E, avec rapports Allure dans la CI.", en: "Unit, integration and E2E, with Allure reports in CI.", it: "Unitari, di integrazione ed E2E, con report Allure in CI." } },
+    { k: "OCR", c: "coral",
+      t: { fr: "Backend Django + OCR", en: "Django backend + OCR", it: "Backend Django + OCR" },
+      d: { fr: "Lecture et scoring automatiques des dossiers locataires.", en: "Automatic reading and scoring of tenant files.", it: "Lettura e punteggio automatici dei fascicoli degli inquilini." } },
+    { k: "IA", c: "amber",
+      t: { fr: "Cartographie métier par IA", en: "AI business mapping", it: "Mappa aziendale con IA" },
+      d: { fr: "Synapsystem : code → Claude (LLM) → graphe Neo4j.", en: "Synapsystem: code → Claude (LLM) → Neo4j graph.", it: "Synapsystem: codice → Claude (LLM) → grafo Neo4j." } }
+  ],
 
   /* ---------- Logos « Réalisé pour » ---------- */
   clients: [

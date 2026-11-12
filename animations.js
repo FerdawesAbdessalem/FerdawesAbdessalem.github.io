@@ -240,7 +240,7 @@
   /* ---------- 5. Apparition au défilement ---------- */
   let revealIO = null;
   function reveal() {
-    const els = document.querySelectorAll(".reveal:not(.in), .proof-text:not(.in)");
+    const els = document.querySelectorAll(".reveal:not(.in)");
     if (REDUCE || !("IntersectionObserver" in window)) { els.forEach((e) => e.classList.add("in")); return; }
     if (!revealIO) revealIO = new IntersectionObserver((es) => es.forEach((e) => {
       if (e.isIntersecting) { e.target.classList.add("in"); revealIO.unobserve(e.target); }

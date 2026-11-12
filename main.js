@@ -95,7 +95,12 @@
     $("#cv-link").href = C.cv[lang];
     $("#cv-top").href = C.cv[lang];
 
-    $("#proof").innerHTML = md(t("proof"));
+    $("#proof").innerHTML = C.proof.map((p, i) => `
+      <li class="proof-card reveal" style="--s:${i}">
+        <span class="proof-badge b-${esc(p.c)}">${esc(p.k)}</span>
+        <h3>${esc(L(p.t, lang))}</h3>
+        <p>${esc(L(p.d, lang))}</p>
+      </li>`).join("");
 
     $("#clients").innerHTML = C.clients.map((c, i) => {
       const inner = `${c.logo ? `<img src="${esc(c.logo)}" alt="${esc(c.name)}" loading="lazy">` : ""}${c.label ? `<span>${esc(c.label)}</span>` : ""}`;
