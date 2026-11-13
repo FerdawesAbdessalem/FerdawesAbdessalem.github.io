@@ -364,9 +364,9 @@ window.CONTENT = {
       place: { fr: "Faculté des Sciences de Monastir, Tunisie", en: "Faculty of Science, Monastir, Tunisia", it: "Facoltà di Scienze di Monastir, Tunisia" },
       dates: { fr: "2020 — 2022", en: "2020 — 2022", it: "2020 — 2022" },
       text: {
-        fr: "Deux ans de mathématiques et de physique intensives, avant le concours d'entrée en école d'ingénieurs.",
-        en: "Two years of intensive mathematics and physics before the engineering-school entrance exam.",
-        it: "Due anni intensivi di matematica e fisica prima del concorso di ammissione alla scuola di ingegneria."
+        fr: "Deux ans en cycle préparatoire scientifique en mathématiques et physique, avant le concours d'entrée en école d'ingénieurs.",
+        en: "Two years in a scientific preparatory programme in mathematics and physics, before the engineering-school entrance exam.",
+        it: "Due anni di ciclo preparatorio scientifico in matematica e fisica, prima del concorso di ammissione alla scuola di ingegneria."
       },
       tags: [] },
 
