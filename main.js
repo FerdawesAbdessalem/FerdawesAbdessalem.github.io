@@ -139,6 +139,7 @@
             ${flow(c, lang)}
           </div>
           <div class="case-text reveal">
+            ${c.badge ? `<p class="case-badge">${esc(L(c.badge, lang))}</p>` : ""}
             <p class="case-meta">${esc(L(c.meta, lang))}</p>
             <h3 class="case-title">${esc(c.name)}</h3>
             <p class="case-desc">${esc(L(c.desc, lang))}</p>
@@ -170,6 +171,16 @@
           <h3>${esc(L(j.title, lang))}</h3>
           <p class="step-place">${esc(L(j.place, lang))}</p>
           <p>${esc(L(j.text, lang))}</p>
+          ${j.award ? `
+          <div class="award">
+            <div class="award-head">
+              <span class="award-icon" aria-hidden="true">🏆</span>
+              <div><strong>${esc(L(j.award.title, lang))}</strong><span>${esc(L(j.award.sub, lang))}</span></div>
+            </div>
+            <div class="award-photos" data-photos='${esc(JSON.stringify(j.award.photos.map(([s, cap]) => [s, L(cap, lang)])))}'>
+              ${j.award.photos.map(([s, cap], k) => `<button type="button" data-index="${k}" aria-label="${esc(t("film.open"))} : ${esc(L(cap, lang))}"><img src="${esc(s)}" alt="${esc(L(cap, lang))}" loading="lazy"></button>`).join("")}
+            </div>
+          </div>` : ""}
           ${tags(j.tags)}
         </div>
       </li>`).join("");

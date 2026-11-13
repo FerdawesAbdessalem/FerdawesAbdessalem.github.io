@@ -20,9 +20,9 @@ window.CONTENT = {
     "theme":       { fr: "Changer de thème", en: "Toggle theme", it: "Cambia tema" },
 
     "hero.kicker": {
-      fr: "Ferdaoues Abdessalem — ingénieure logiciel · Ispica, Italie",
-      en: "Ferdaoues Abdessalem — software engineer · Ispica, Italy",
-      it: "Ferdaoues Abdessalem — ingegnere del software · Ispica, Italia"
+      fr: "Ferdaoues Abdessalem — ingénieure logiciel · Palerme, Italie",
+      en: "Ferdaoues Abdessalem — software engineer · Palermo, Italy",
+      it: "Ferdaoues Abdessalem — ingegnere del software · Palermo, Italia"
     },
     /* Grand titre : chaque mot apparaît l'un après l'autre */
     "hero.title": {
@@ -36,9 +36,9 @@ window.CONTENT = {
       it: "Ingegnere dello sviluppo software, specializzata nella progettazione e nello sviluppo di soluzioni backend e full stack. Esperienza nell'architettura e nello sviluppo di API REST, nell'automazione dei test e nell'integrazione continua (CI/CD), con padronanza di diverse tecnologie e framework, tra cui Symfony, Django e Angular."
     },
     "hero.lead": {
-      fr: "Ingénieure logiciel backend et full stack : API REST avec Symfony et Django, interfaces Angular, tests automatisés et CI/CD.",
-      en: "Backend and full-stack software engineer: REST APIs with Symfony and Django, Angular interfaces, automated testing and CI/CD.",
-      it: "Ingegnere del software backend e full stack: API REST con Symfony e Django, interfacce Angular, test automatizzati e CI/CD."
+      fr: "Je développe des applications web complètes — API REST avec Symfony et Django, interfaces Angular — livrées avec des tests automatisés et une CI/CD.",
+      en: "I build complete web applications — REST APIs with Symfony and Django, Angular front ends — shipped with automated tests and CI/CD.",
+      it: "Sviluppo applicazioni web complete — API REST con Symfony e Django, interfacce Angular — rilasciate con test automatizzati e CI/CD."
     },
     "hero.status": {
       fr: "Disponible immédiatement · tous contrats · toute l'UE",
@@ -158,7 +158,7 @@ window.CONTENT = {
     { k: { fr: "IA", en: "AI", it: "IA" },
       v: { fr: "LLM (Claude) · TensorFlow · scikit-learn · OCR", en: "LLM (Claude) · TensorFlow · scikit-learn · OCR", it: "LLM (Claude) · TensorFlow · scikit-learn · OCR" } },
     { k: { fr: "Formation", en: "Education", it: "Formazione" },
-      v: { fr: "Diplôme d'ingénieur en télécommunications, ENISo Sousse (2025)", en: "Telecommunications engineering degree, ENISo Sousse (2025)", it: "Laurea in Ingegneria delle Telecomunicazioni, ENISo Sousse (2025)" } }
+      v: { fr: "Diplôme d'ingénieur en télécommunications, ENISo Sousse (2025) · prix du meilleur projet de fin d'études", en: "Telecommunications engineering degree, ENISo Sousse (2025) · Best Final-Year Project award", it: "Laurea in Ingegneria delle Telecomunicazioni, ENISo Sousse (2025) · premio per il miglior progetto di tesi" } }
   ],
 
   /* ---------- Grands projets (avec « film » d'écrans) ----------
@@ -207,6 +207,7 @@ window.CONTENT = {
         en: "Final-year project · AZERTY UI · 2025",
         it: "Progetto di tesi · AZERTY UI · 2025"
       },
+      badge: { fr: "🏆 Meilleur projet de fin d'études — ENISo 2025", en: "🏆 Best Final-Year Project — ENISo 2025", it: "🏆 Miglior progetto di tesi — ENISo 2025" },
       desc: {
         fr: "Plateforme de location immobilière assistée par IA : le locataire dépose ses justificatifs depuis l'application mobile, le backend les lit, les vérifie et calcule un score de dossier pour le propriétaire.",
         en: "An AI-assisted rental platform: tenants upload their documents from the mobile app, and the backend reads, checks and scores the application for the landlord.",
@@ -345,9 +346,27 @@ window.CONTENT = {
       place: { fr: "Sousse, Tunisie", en: "Sousse, Tunisia", it: "Sousse, Tunisia" },
       dates: { fr: "2022 — 2025", en: "2022 — 2025", it: "2022 — 2025" },
       text: {
-        fr: "École Nationale d'Ingénieurs de Sousse. Après un cycle préparatoire en mathématiques et physique à la Faculté des Sciences de Monastir (2020 – 2022).",
-        en: "National Engineering School of Sousse. After a preparatory cycle in mathematics and physics at the Faculty of Science, Monastir (2020 – 2022).",
-        it: "Scuola Nazionale di Ingegneria di Sousse. Dopo un ciclo preparatorio in matematica e fisica alla Facoltà di Scienze di Monastir (2020 – 2022)."
+        fr: "École Nationale d'Ingénieurs de Sousse (ENISo). Projet de fin d'études : Secure Appart, réalisé chez AZERTY UI.",
+        en: "National Engineering School of Sousse (ENISo). Final-year project: Secure Appart, built at AZERTY UI.",
+        it: "Scuola Nazionale di Ingegneria di Sousse (ENISo). Progetto di tesi: Secure Appart, realizzato presso AZERTY UI."
+      },
+      award: {
+        title: { fr: "Prix du meilleur projet de fin d'études", en: "Best Final-Year Project award", it: "Premio per il miglior progetto di tesi" },
+        sub: { fr: "Forum des PFE ENISo 2025 · filière Télécommunication embarquée", en: "ENISo Final-Year Project Forum 2025 · Embedded Telecommunications track", it: "Forum dei progetti di tesi ENISo 2025 · indirizzo Telecomunicazioni embedded" },
+        photos: [
+          ["assets/award/remise.webp", { fr: "Remise du prix — Forum des PFE ENISo 2025", en: "Award ceremony — ENISo Final-Year Project Forum 2025", it: "Consegna del premio — Forum ENISo 2025" }],
+          ["assets/award/certificat.webp", { fr: "Certificat « Meilleur projet de fin d'études »", en: "“Best Final-Year Project” certificate", it: "Attestato « Miglior progetto di tesi »" }]
+        ]
+      },
+      tags: [] },
+
+    { title: { fr: "Cycle préparatoire en mathématiques et physique", en: "Preparatory cycle in mathematics & physics", it: "Ciclo preparatorio in matematica e fisica" },
+      place: { fr: "Faculté des Sciences de Monastir, Tunisie", en: "Faculty of Science, Monastir, Tunisia", it: "Facoltà di Scienze di Monastir, Tunisia" },
+      dates: { fr: "2020 — 2022", en: "2020 — 2022", it: "2020 — 2022" },
+      text: {
+        fr: "Deux ans de mathématiques et de physique intensives, avant le concours d'entrée en école d'ingénieurs.",
+        en: "Two years of intensive mathematics and physics before the engineering-school entrance exam.",
+        it: "Due anni intensivi di matematica e fisica prima del concorso di ammissione alla scuola di ingegneria."
       },
       tags: [] },
 
@@ -389,7 +408,7 @@ window.CONTENT = {
     { k: { fr: "Contrat", en: "Contract", it: "Contratto" },
       v: { fr: "Tous types : CDI, CDD, freelance ou mission", en: "Any type: permanent, fixed-term, freelance or contract", it: "Qualsiasi tipo: tempo indeterminato, determinato, freelance o consulenza" } },
     { k: { fr: "Localisation", en: "Location", it: "Sede" },
-      v: { fr: "Basée à Ispica, Italie (UTC+1) · mobile dans toute l'Union européenne", en: "Based in Ispica, Italy (UTC+1) · open to roles anywhere in the European Union", it: "Con sede a Ispica, Italia (UTC+1) · disponibile in tutta l'Unione europea" } },
+      v: { fr: "Basée à Palerme, Italie (UTC+1) · mobile dans toute l'Union européenne", en: "Based in Palermo, Italy (UTC+1) · open to roles anywhere in the European Union", it: "Con sede a Palermo, Italia (UTC+1) · disponibile in tutta l'Unione europea" } },
     { k: { fr: "Langues de travail", en: "Working languages", it: "Lingue di lavoro" },
       v: { fr: "Français (C1) · anglais (B1) · italien (A2) · arabe", en: "French (C1) · English (B1) · Italian (A2) · Arabic", it: "Francese (C1) · inglese (B1) · italiano (A2) · arabo" } },
     { k: { fr: "Points forts", en: "Strengths", it: "Punti di forza" },

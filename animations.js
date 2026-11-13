@@ -353,6 +353,15 @@
     return { open };
   })();
 
+  /* ---------- 7b. Photos du prix : ouverture en plein écran ---------- */
+  function awards() {
+    document.querySelectorAll(".award-photos").forEach((box) => {
+      const list = JSON.parse(box.dataset.photos || "[]");
+      box.querySelectorAll("button").forEach((b) =>
+        b.addEventListener("click", () => lightbox.open(list, parseInt(b.dataset.index, 10))));
+    });
+  }
+
   /* ---------- 8. Schémas : les étapes s'allument tour à tour ---------- */
   let flowTimers = [];
   function flows() {
@@ -500,6 +509,7 @@
     typewriter();
     reveal();
     filmsInit();
+    awards();
     flows();
     filters();
     tilt();
