@@ -36,9 +36,9 @@ window.CONTENT = {
       it: "Ingegnere dello sviluppo software, specializzata nella progettazione e nello sviluppo di soluzioni backend e full stack. Esperienza nell'architettura e nello sviluppo di API REST, nell'automazione dei test e nell'integrazione continua (CI/CD), con padronanza di diverse tecnologie e framework, tra cui Symfony, Django e Angular."
     },
     "hero.lead": {
-      fr: "Je développe des applications web complètes — API REST avec Symfony et Django, interfaces Angular — livrées avec des tests automatisés et une CI/CD.",
-      en: "I build complete web applications — REST APIs with Symfony and Django, Angular front ends — shipped with automated tests and CI/CD.",
-      it: "Sviluppo applicazioni web complete — API REST con Symfony e Django, interfacce Angular — rilasciate con test automatizzati e CI/CD."
+      fr: "Ingénieure logiciel : API REST avec Symfony et Django, interfaces Angular, tests automatisés et CI/CD.",
+      en: "Software engineer: REST APIs with Symfony and Django, Angular interfaces, automated testing and CI/CD.",
+      it: "Ingegnere del software: API REST con Symfony e Django, interfacce Angular, test automatizzati e CI/CD."
     },
     "hero.status": {
       fr: "Disponible immédiatement · tous contrats · toute l'UE",
