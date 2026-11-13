@@ -210,18 +210,14 @@ window.CONTENT = {
       pills: ["Django", "OCR", "MongoDB"],
       flow: [["fr:Justificatif|en:Document|it:Documento", "client"], ["OCR · Tesseract", "api"], ["Random Forest", "ai"], ["fr:Score du dossier|en:Application score|it:Punteggio", "qa"]],
       film: { device: "phone", frames: [
-        ["assets/work/secure-appart/1.webp",  { fr: "Bienvenue — choix du profil", en: "Welcome — choose a profile", it: "Benvenuto — scelta del profilo" }],
-        ["assets/work/secure-appart/2.webp",  { fr: "Préférences de recherche", en: "Search preferences", it: "Preferenze di ricerca" }],
-        ["assets/work/secure-appart/3.webp",  { fr: "Pièce d'identité", en: "ID document", it: "Documento d'identità" }],
-        ["assets/work/secure-appart/4.webp",  { fr: "Contrat de travail", en: "Employment contract", it: "Contratto di lavoro" }],
-        ["assets/work/secure-appart/5.webp",  { fr: "Fiches de paie", en: "Payslips", it: "Buste paga" }],
-        ["assets/work/secure-appart/6.webp",  { fr: "Extraits bancaires", en: "Bank statements", it: "Estratti conto" }],
-        ["assets/work/secure-appart/7.webp",  { fr: "Score du dossier", en: "Application score", it: "Punteggio del fascicolo" }],
-        ["assets/work/secure-appart/8.webp",  { fr: "Accueil — dernières annonces", en: "Home — latest listings", it: "Home — ultimi annunci" }],
-        ["assets/work/secure-appart/9.webp",  { fr: "Mes documents", en: "My documents", it: "I miei documenti" }],
-        ["assets/work/secure-appart/10.webp", { fr: "Profil locataire", en: "Tenant profile", it: "Profilo inquilino" }],
-        ["assets/work/secure-appart/11.webp", { fr: "Espace propriétaire", en: "Landlord space", it: "Area proprietario" }],
-        ["assets/work/secure-appart/12.webp", { fr: "Propositions de locataires", en: "Tenant proposals", it: "Proposte degli inquilini" }]
+        ["assets/work/secure-appart/new-1.webp", { fr: "Connexion", en: "Sign in", it: "Accesso" }],
+        ["assets/work/secure-appart/new-2.webp", { fr: "Création de compte", en: "Sign up", it: "Registrazione" }],
+        ["assets/work/secure-appart/new-3.webp", { fr: "Vérification de l'e-mail par code", en: "E-mail verification code", it: "Verifica e-mail con codice" }],
+        ["assets/work/secure-appart/new-5.webp", { fr: "Choix du profil", en: "Choose a profile", it: "Scelta del profilo" }],
+        ["assets/work/secure-appart/3.webp", { fr: "Dépôt de la pièce d'identité", en: "ID document upload", it: "Caricamento documento d'identità" }],
+        ["assets/work/secure-appart/7.webp", { fr: "Score du dossier calculé par l'IA", en: "AI-computed application score", it: "Punteggio calcolato dall'IA" }],
+        ["assets/work/secure-appart/8.webp", { fr: "Accueil — dernières annonces", en: "Home — latest listings", it: "Home — ultimi annunci" }],
+        ["assets/work/secure-appart/new-4.webp", { fr: "Mot de passe oublié", en: "Forgot password", it: "Password dimenticata" }]
       ], note: { fr: "écrans réels de l'application mobile", en: "real screens of the mobile app", it: "schermate reali dell'app mobile" } } },
 
     { id: "synap", name: "Synapsystem", stack: ["ai", "django"],
