@@ -124,7 +124,9 @@
     $("#cases").innerHTML = C.cases.map((c, i) => {
       const links = [
         c.site ? `<a class="btn small" href="${esc(c.site)}" target="_blank" rel="noopener">${esc(t("link.site"))} ↗</a>` : "",
-        c.code ? `<a class="btn small ghost" href="${esc(c.code)}" target="_blank" rel="noopener">${esc(t("link.code"))} ↗</a>` : ""
+        c.code ? `<a class="btn small ghost" href="${esc(c.code)}" target="_blank" rel="noopener">${esc(t("link.code"))} ↗</a>` : "",
+        ...(c.repos || []).map(([label, url]) =>
+          `<a class="btn small ghost" href="${esc(url)}" target="_blank" rel="noopener">${esc(L(label, lang))} ↗</a>`)
       ].join("");
       return `
       <article class="case${i % 2 ? " flip" : ""}" id="case-${c.id}" data-stack="${c.stack.join(" ")}">

@@ -224,7 +224,11 @@ window.CONTENT = {
              "Analisi documentale automatizzata: **OCR Tesseract** + classificatore **Random Forest** (documento d'identità, buste paga, estratti conto).",
              "Database **MongoDB** e pipeline **GitLab CI/CD** per build e deployment."]
       },
-      tags: ["Django", "Python", "MongoDB", "Tesseract OCR", "Random Forest", "Flutter", "GitLab CI"],
+      tags: ["Django", "Python", "MongoDB", "Tesseract OCR", "Random Forest", "Flutter", "Docker"],
+      repos: [
+        [{ fr: "Code API Django", en: "Django API code", it: "Codice API Django" }, GH + "secure-appart-api"],
+        [{ fr: "Code app Flutter", en: "Flutter app code", it: "Codice app Flutter" }, GH + "secure-appart-mobile"]
+      ],
       pills: ["Django", "OCR", "MongoDB"],
       flow: [["fr:Justificatif|en:Document|it:Documento", "client"], ["OCR · Tesseract", "api"], ["Random Forest", "ai"], ["fr:Score du dossier|en:Application score|it:Punteggio", "qa"]],
       film: { device: "phone", frames: [
@@ -275,7 +279,44 @@ window.CONTENT = {
         ["assets/work/synapsystem/3.webp", { fr: "Sources prises en charge", en: "Supported sources", it: "Fonti supportate" }],
         ["assets/work/synapsystem/4.webp", { fr: "Ce que vous obtenez", en: "What you get", it: "Cosa ottieni" }],
         ["assets/work/synapsystem/5.webp", { fr: "Connexion", en: "Sign in", it: "Accesso" }]
-      ], note: { fr: "écrans réels du site", en: "real screens of the site", it: "schermate reali del sito" } } }
+      ], note: { fr: "écrans réels du site", en: "real screens of the site", it: "schermate reali del sito" } } },
+
+    { id: "mfbuy", name: "M&F Buy", stack: ["symfony", "tests"],
+      meta: {
+        fr: "Projet personnel · 2022, refonte complète 2026",
+        en: "Personal project · 2022, fully rebuilt in 2026",
+        it: "Progetto personale · 2022, rifatto nel 2026"
+      },
+      desc: {
+        fr: "Boutique en ligne de matériel réseau (routeurs, switches, Wi-Fi, sécurité) : catalogue, panier, commande, espace client et back-office, en PHP 8 sans framework.",
+        en: "Online store for network equipment (routers, switches, Wi-Fi, security): catalogue, cart, checkout, customer area and back office, in framework-free PHP 8.",
+        it: "Negozio online di apparecchiature di rete (router, switch, Wi-Fi, sicurezza): catalogo, carrello, ordini, area clienti e back office, in PHP 8 senza framework."
+      },
+      did: {
+        fr: ["Architecture en couches : **contrôleurs, repositories PDO, services** (commande en **transaction** avec contrôle du stock).",
+             "Sécurité : **requêtes préparées**, protection **CSRF / XSS**, mots de passe hachés, contrôle d'accès, upload d'images vérifié.",
+             "**Back-office** (statistiques, produits, commandes), tests **PHPUnit**, **Docker** et CI GitHub Actions."],
+        en: ["Layered architecture: **controllers, PDO repositories, services** (checkout in a **transaction** with stock checks).",
+             "Security: **prepared statements**, **CSRF / XSS** protection, hashed passwords, access control, validated image uploads.",
+             "**Back office** (stats, products, orders), **PHPUnit** tests, **Docker** and GitHub Actions CI."],
+        it: ["Architettura a livelli: **controller, repository PDO, servizi** (ordine in **transazione** con controllo dello stock).",
+             "Sicurezza: **query preparate**, protezione **CSRF / XSS**, password cifrate, controllo degli accessi, upload verificati.",
+             "**Back office** (statistiche, prodotti, ordini), test **PHPUnit**, **Docker** e CI GitHub Actions."]
+      },
+      tags: ["PHP 8", "MySQL", "PDO", "PHPUnit", "Docker", "GitHub Actions"],
+      repos: [[{ fr: "Code source", en: "Source code", it: "Codice" }, GH + "OnlineShope"]],
+      pills: ["PHP 8", "MySQL", "PHPUnit"],
+      flow: [["fr:Client|en:Customer|it:Cliente", "client"], ["fr:Contrôleurs PHP|en:PHP controllers|it:Controller PHP", "api"], ["MySQL · PDO", "db"], ["fr:Tests PHPUnit|en:PHPUnit tests|it:Test PHPUnit", "qa"]],
+      film: { device: "laptop", frames: [
+        ["assets/work/mfbuy/1.webp", { fr: "Accueil — catégories et sélection", en: "Home — categories and featured products", it: "Home — categorie e selezione" }],
+        ["assets/work/mfbuy/2.webp", { fr: "Catalogue avec filtres et tri", en: "Catalogue with filters and sorting", it: "Catalogo con filtri e ordinamento" }],
+        ["assets/work/mfbuy/3.webp", { fr: "Fiche produit et stock en temps réel", en: "Product page with live stock", it: "Scheda prodotto e stock in tempo reale" }],
+        ["assets/work/mfbuy/4.webp", { fr: "Panier", en: "Cart", it: "Carrello" }],
+        ["assets/work/mfbuy/5.webp", { fr: "Suivi de commande client", en: "Customer order tracking", it: "Tracciamento ordine" }],
+        ["assets/work/mfbuy/6.webp", { fr: "Back-office — tableau de bord", en: "Back office — dashboard", it: "Back office — dashboard" }],
+        ["assets/work/mfbuy/7.webp", { fr: "Back-office — gestion des produits", en: "Back office — product management", it: "Back office — gestione prodotti" }],
+        ["assets/work/mfbuy/8.webp", { fr: "Back-office — détail et statut d'une commande", en: "Back office — order detail and status", it: "Back office — dettaglio e stato ordine" }]
+      ], note: { fr: "écrans réels de l'application", en: "real screens of the application", it: "schermate reali dell'applicazione" } } }
   ],
 
   /* Filtres des projets : id → libellé */
@@ -292,32 +333,22 @@ window.CONTENT = {
     { name: "Eyes Open", year: "2024", stack: ["ai", "mobile"],
       kind: { fr: "Application d'assistance par reconnaissance d'objets", en: "Assistive object-recognition app", it: "App assistiva di riconoscimento oggetti" },
       desc: {
-        fr: "Reconnaissance d'objets en temps réel par deep learning, avec description audio et textuelle pour les personnes malvoyantes.",
-        en: "Real-time object recognition with deep learning, giving audio and text descriptions to visually impaired users.",
-        it: "Riconoscimento di oggetti in tempo reale con deep learning, con descrizioni audio e testuali per utenti ipovedenti."
+        fr: "Assistant pour personnes malvoyantes : la caméra reconnaît les objets sur le téléphone et les annonce à voix haute, avec leur position (gauche, devant, droite) et leur proximité.",
+        en: "Assistant for visually impaired people: the camera recognises objects on the phone and announces them out loud, with their position (left, ahead, right) and proximity.",
+        it: "Assistente per persone ipovedenti: la fotocamera riconosce gli oggetti sul telefono e li annuncia a voce, con posizione (sinistra, davanti, destra) e vicinanza."
       },
-      tags: ["Kotlin", "TensorFlow", "Computer vision"],
+      tags: ["Kotlin", "CameraX", "TensorFlow Lite", "Text-to-Speech"],
       code: GH + "EyesOpen" },
 
     { name: "WirdiApp", year: "2024", stack: ["mobile"],
-      kind: { fr: "Gestion d'associations éducatives", en: "Educational association management", it: "Gestione di associazioni educative" },
+      kind: { fr: "Suivi de mémorisation pour associations coraniques", en: "Memorisation tracking for Qur'an associations", it: "Monitoraggio della memorizzazione per associazioni coraniche" },
       desc: {
-        fr: "Application mobile pour la coordination des étudiants, la planification des révisions et la gestion des examens.",
-        en: "Mobile app for student coordination, revision planning and exam management.",
-        it: "App mobile per il coordinamento degli studenti, la pianificazione dei ripassi e la gestione degli esami."
+        fr: "Espace superviseur (halaqat, élèves, programmes de mémorisation et de révision, examens) et espace élève pour suivre sa progression. Interface arabe RTL.",
+        en: "Supervisor space (study circles, students, memorisation and revision programmes, exams) and a student space to follow progress. Arabic RTL interface.",
+        it: "Area supervisore (gruppi, studenti, programmi di memorizzazione e ripasso, esami) e area studente per seguire i progressi. Interfaccia araba RTL."
       },
-      tags: ["Flutter", "Firebase"],
-      code: GH + "Education_APP" },
-
-    { name: "M&F Buy", year: "2022", stack: ["symfony"],
-      kind: { fr: "Application web e-commerce", en: "E-commerce web application", it: "Applicazione web e-commerce" },
-      desc: {
-        fr: "Boutique en ligne de matériel réseau : catalogue produits, panier et gestion des commandes.",
-        en: "Online store for network equipment: product catalogue, cart and order management.",
-        it: "Negozio online di apparecchiature di rete: catalogo prodotti, carrello e gestione degli ordini."
-      },
-      tags: ["PHP", "MySQL"],
-      code: GH + "OnlineShope" }
+      tags: ["Flutter", "Dart", "Provider", "Material 3"],
+      code: GH + "Education_APP" }
   ],
 
   /* ---------- Parcours (frise) ---------- */
