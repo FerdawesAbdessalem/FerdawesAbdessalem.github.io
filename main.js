@@ -145,8 +145,6 @@
             <p class="case-meta">${esc(L(c.meta, lang))}</p>
             <h3 class="case-title">${esc(c.name)}</h3>
             <p class="case-desc">${esc(L(c.desc, lang))}</p>
-            <p class="case-did-title">${esc(t("work.did"))}</p>
-            <ul class="case-did">${L(c.did, lang).map((d) => `<li>${md(d)}</li>`).join("")}</ul>
             ${tags(c.tags)}
             ${links ? `<div class="case-links">${links}</div>` : ""}
           </div>

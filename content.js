@@ -176,17 +176,6 @@ window.CONTENT = {
         en: "A French mountain holiday-rental platform: thousands of chalets, apartments and studios rented directly from their owners. A live production site, built as a team at AZERTY UI.",
         it: "Piattaforma francese di affitti stagionali in montagna: migliaia di chalet, appartamenti e monolocali affittati direttamente dai proprietari. Sito in produzione, sviluppato in team presso AZERTY UI."
       },
-      did: {
-        fr: ["Conception et développement d'**API REST Symfony / PHP** pour la recherche et la réservation.",
-             "Modélisation et maintenance des **bases de données MySQL** au cœur de la logique métier.",
-             "Tests automatisés **unitaires, d'intégration et end-to-end** (Playwright), rapports **Allure** dans la CI."],
-        en: ["Designed and built **Symfony / PHP REST APIs** for search and booking.",
-             "Modelled and maintained the **MySQL databases** behind the core business logic.",
-             "Automated **unit, integration and end-to-end** tests (Playwright), with **Allure** reports in CI."],
-        it: ["Progettazione e sviluppo di **API REST Symfony / PHP** per ricerca e prenotazione.",
-             "Modellazione e manutenzione dei **database MySQL** alla base della logica di business.",
-             "Test automatizzati **unitari, di integrazione ed end-to-end** (Playwright), report **Allure** in CI."]
-      },
       tags: ["Symfony", "PHP", "MySQL", "Doctrine", "Playwright", "Allure", "GitLab CI"],
       site: "https://www.chalet-montagne.com/",
       logo: "assets/logos/chalet-montagne.svg",
@@ -212,17 +201,6 @@ window.CONTENT = {
         fr: "Plateforme de location immobilière assistée par IA : le locataire dépose ses justificatifs depuis l'application mobile, le backend les lit, les vérifie et calcule un score de dossier pour le propriétaire.",
         en: "An AI-assisted rental platform: tenants upload their documents from the mobile app, and the backend reads, checks and scores the application for the landlord.",
         it: "Piattaforma di locazione assistita da IA: l'inquilino carica i documenti dall'app mobile, il backend li legge, li verifica e calcola un punteggio del fascicolo per il proprietario."
-      },
-      did: {
-        fr: ["Backend **Django REST** exposant les API de l'application mobile.",
-             "Analyse documentaire automatisée : **OCR Tesseract** + classifieur **Random Forest** (pièce d'identité, fiches de paie, relevés).",
-             "Base **MongoDB** et pipelines **GitLab CI/CD** pour le build et le déploiement."],
-        en: ["**Django REST** backend serving the mobile app's APIs.",
-             "Automated document analysis: **Tesseract OCR** + a **Random Forest** classifier (ID, payslips, bank statements).",
-             "**MongoDB** datastore and **GitLab CI/CD** pipelines for build and deployment."],
-        it: ["Backend **Django REST** che espone le API dell'app mobile.",
-             "Analisi documentale automatizzata: **OCR Tesseract** + classificatore **Random Forest** (documento d'identità, buste paga, estratti conto).",
-             "Database **MongoDB** e pipeline **GitLab CI/CD** per build e deployment."]
       },
       tags: ["Django", "Python", "MongoDB", "Tesseract OCR", "Random Forest", "Flutter", "Docker"],
       repos: [
@@ -257,17 +235,6 @@ window.CONTENT = {
         en: "Business knowledge management: Synapsystem reads a company's code and documents, extracts business rules and processes, has teams validate them, then answers questions through an AI assistant.",
         it: "Gestione della conoscenza aziendale: Synapsystem legge il codice e i documenti di un'azienda, ne estrae regole di business e processi, li fa validare dai team e risponde alle domande con un assistente IA."
       },
-      did: {
-        fr: ["Génération automatique d'une **cartographie métier** à partir du code avec **Claude (LLM)**.",
-             "Graphe de connaissance **Neo4j** reliant code, domaines, règles et processus, avec la preuve d'origine.",
-             "Services **Python** et interface **Next.js**, déployés avec **Docker**."],
-        en: ["Automatic generation of a **business map** from source code using **Claude (LLM)**.",
-             "**Neo4j** knowledge graph linking code, domains, rules and processes, with the source as proof.",
-             "**Python** services and a **Next.js** interface, deployed with **Docker**."],
-        it: ["Generazione automatica di una **mappa aziendale** dal codice con **Claude (LLM)**.",
-             "Grafo della conoscenza **Neo4j** che collega codice, domini, regole e processi, con la fonte come prova.",
-             "Servizi **Python** e interfaccia **Next.js**, distribuiti con **Docker**."]
-      },
       tags: ["Claude (LLM)", "Neo4j", "Python", "Next.js", "Docker"],
       site: "https://synapsystem.azertyui.fr/",
       logo: "assets/logos/synapsystem.svg",
@@ -283,25 +250,14 @@ window.CONTENT = {
 
     { id: "mfbuy", name: "M&F Buy", stack: ["symfony", "tests"],
       meta: {
-        fr: "Projet personnel · 2022, refonte complète 2026",
-        en: "Personal project · 2022, fully rebuilt in 2026",
-        it: "Progetto personale · 2022, rifatto nel 2026"
+        fr: "Projet personnel · 2022",
+        en: "Personal project · 2022",
+        it: "Progetto personale · 2022"
       },
       desc: {
         fr: "Boutique en ligne de matériel réseau (routeurs, switches, Wi-Fi, sécurité) : catalogue, panier, commande, espace client et back-office, en PHP 8 sans framework.",
         en: "Online store for network equipment (routers, switches, Wi-Fi, security): catalogue, cart, checkout, customer area and back office, in framework-free PHP 8.",
         it: "Negozio online di apparecchiature di rete (router, switch, Wi-Fi, sicurezza): catalogo, carrello, ordini, area clienti e back office, in PHP 8 senza framework."
-      },
-      did: {
-        fr: ["Architecture en couches : **contrôleurs, repositories PDO, services** (commande en **transaction** avec contrôle du stock).",
-             "Sécurité : **requêtes préparées**, protection **CSRF / XSS**, mots de passe hachés, contrôle d'accès, upload d'images vérifié.",
-             "**Back-office** (statistiques, produits, commandes), tests **PHPUnit**, **Docker** et CI GitHub Actions."],
-        en: ["Layered architecture: **controllers, PDO repositories, services** (checkout in a **transaction** with stock checks).",
-             "Security: **prepared statements**, **CSRF / XSS** protection, hashed passwords, access control, validated image uploads.",
-             "**Back office** (stats, products, orders), **PHPUnit** tests, **Docker** and GitHub Actions CI."],
-        it: ["Architettura a livelli: **controller, repository PDO, servizi** (ordine in **transazione** con controllo dello stock).",
-             "Sicurezza: **query preparate**, protezione **CSRF / XSS**, password cifrate, controllo degli accessi, upload verificati.",
-             "**Back office** (statistiche, prodotti, ordini), test **PHPUnit**, **Docker** e CI GitHub Actions."]
       },
       tags: ["PHP 8", "MySQL", "PDO", "PHPUnit", "Docker", "GitHub Actions"],
       repos: [[{ fr: "Code source", en: "Source code", it: "Codice" }, GH + "OnlineShope"]],
@@ -316,7 +272,35 @@ window.CONTENT = {
         ["assets/work/mfbuy/6.webp", { fr: "Back-office — tableau de bord", en: "Back office — dashboard", it: "Back office — dashboard" }],
         ["assets/work/mfbuy/7.webp", { fr: "Back-office — gestion des produits", en: "Back office — product management", it: "Back office — gestione prodotti" }],
         ["assets/work/mfbuy/8.webp", { fr: "Back-office — détail et statut d'une commande", en: "Back office — order detail and status", it: "Back office — dettaglio e stato ordine" }]
-      ], note: { fr: "écrans réels de l'application", en: "real screens of the application", it: "schermate reali dell'applicazione" } } }
+      ], note: { fr: "écrans réels de l'application", en: "real screens of the application", it: "schermate reali dell'applicazione" } } },
+
+    { id: "wirdi", name: "WirdiApp", stack: ["mobile", "tests"],
+      meta: {
+        fr: "Projet personnel · 2024",
+        en: "Personal project · 2024",
+        it: "Progetto personale · 2024"
+      },
+      desc: {
+        fr: "Application de suivi de mémorisation du Coran pour les associations : le superviseur organise les halaqat, les programmes et les examens, chaque élève suit sa progression depuis son téléphone. Interface arabe, de droite à gauche.",
+        en: "Qur'an memorisation tracking app for associations: the supervisor organises study circles, programmes and exams, and each student follows their progress from their phone. Arabic, right-to-left interface.",
+        it: "App di monitoraggio della memorizzazione del Corano per le associazioni: il supervisore organizza gruppi, programmi ed esami, ogni studente segue i propri progressi dal telefono. Interfaccia araba, da destra a sinistra."
+      },
+      tags: ["Flutter", "Dart", "Provider", "Material 3", "RTL"],
+      repos: [[{ fr: "Code source", en: "Source code", it: "Codice" }, GH + "Education_APP"]],
+      pills: ["Flutter", "Dart", "RTL"],
+      flow: [["fr:Superviseur|en:Supervisor|it:Supervisore", "client"], ["fr:Programmes & examens|en:Programmes & exams|it:Programmi ed esami", "api"], ["fr:Stockage local|en:Local storage|it:Archiviazione locale", "db"], ["fr:Suivi élève|en:Student tracking|it:Monitoraggio studente", "qa"]],
+      film: { device: "phone", frames: [
+        ["assets/work/wirdi/1.webp",  { fr: "Accueil — choix de l'espace", en: "Welcome — choose a space", it: "Benvenuto — scelta dell'area" }],
+        ["assets/work/wirdi/2.webp",  { fr: "Tableau de bord du superviseur", en: "Supervisor dashboard", it: "Dashboard del supervisore" }],
+        ["assets/work/wirdi/3.webp",  { fr: "Élèves et progression", en: "Students and progress", it: "Studenti e avanzamento" }],
+        ["assets/work/wirdi/4.webp",  { fr: "Fiche élève — programmes et examens", en: "Student page — programmes and exams", it: "Scheda studente — programmi ed esami" }],
+        ["assets/work/wirdi/5.webp",  { fr: "Programmes de mémorisation", en: "Memorisation programmes", it: "Programmi di memorizzazione" }],
+        ["assets/work/wirdi/6.webp",  { fr: "Examens et résultats", en: "Exams and results", it: "Esami e risultati" }],
+        ["assets/work/wirdi/7.webp",  { fr: "Notifications d'activité", en: "Activity notifications", it: "Notifiche di attività" }],
+        ["assets/work/wirdi/8.webp",  { fr: "Connexion élève", en: "Student sign-in", it: "Accesso studente" }],
+        ["assets/work/wirdi/9.webp",  { fr: "Accueil élève — mon wird", en: "Student home — my wird", it: "Home studente — il mio wird" }],
+        ["assets/work/wirdi/10.webp", { fr: "Mes examens", en: "My exams", it: "I miei esami" }]
+      ], note: { fr: "écrans réels de l'application", en: "real screens of the app", it: "schermate reali dell'app" } } }
   ],
 
   /* Filtres des projets : id → libellé */
@@ -338,17 +322,7 @@ window.CONTENT = {
         it: "Assistente per persone ipovedenti: la fotocamera riconosce gli oggetti sul telefono e li annuncia a voce, con posizione (sinistra, davanti, destra) e vicinanza."
       },
       tags: ["Kotlin", "CameraX", "TensorFlow Lite", "Text-to-Speech"],
-      code: GH + "EyesOpen" },
-
-    { name: "WirdiApp", year: "2024", stack: ["mobile"],
-      kind: { fr: "Suivi de mémorisation pour associations coraniques", en: "Memorisation tracking for Qur'an associations", it: "Monitoraggio della memorizzazione per associazioni coraniche" },
-      desc: {
-        fr: "Espace superviseur (halaqat, élèves, programmes de mémorisation et de révision, examens) et espace élève pour suivre sa progression. Interface arabe RTL.",
-        en: "Supervisor space (study circles, students, memorisation and revision programmes, exams) and a student space to follow progress. Arabic RTL interface.",
-        it: "Area supervisore (gruppi, studenti, programmi di memorizzazione e ripasso, esami) e area studente per seguire i progressi. Interfaccia araba RTL."
-      },
-      tags: ["Flutter", "Dart", "Provider", "Material 3"],
-      code: GH + "Education_APP" }
+      code: GH + "EyesOpen" }
   ],
 
   /* ---------- Parcours (frise) ---------- */
