@@ -80,18 +80,6 @@ window.CONTENT = {
     "link.code":   { fr: "Code source", en: "Source code", it: "Codice" },
     "link.cert":   { fr: "Voir", en: "View", it: "Vedi" },
 
-    "pipe.title":  { fr: "Du commit à la production", en: "From commit to production", it: "Dal commit alla produzione" },
-    "pipe.text": {
-      fr: "Ma façon de livrer : chaque changement passe par un pipeline automatisé — build, tests unitaires, d'intégration et end-to-end, rapport de qualité, puis déploiement.",
-      en: "How I ship: every change goes through an automated pipeline — build, unit, integration and end-to-end tests, a quality report, then deployment.",
-      it: "Il mio modo di rilasciare: ogni modifica passa da una pipeline automatizzata — build, test unitari, di integrazione ed end-to-end, report di qualità, poi rilascio."
-    },
-    "pipe.s1": { fr: "Commit", en: "Commit", it: "Commit" },
-    "pipe.s2": { fr: "Build", en: "Build", it: "Build" },
-    "pipe.s3": { fr: "Tests", en: "Tests", it: "Test" },
-    "pipe.s4": { fr: "Rapport QA", en: "QA report", it: "Report QA" },
-    "pipe.s5": { fr: "Déploiement", en: "Deploy", it: "Rilascio" },
-
     "path.title":  { fr: "Mon parcours", en: "The path so far", it: "Il mio percorso" },
     "edu.title":   { fr: "Formation", en: "Education", it: "Formazione" },
     "cert.title":  { fr: "Certifications", en: "Certifications", it: "Certificazioni" },

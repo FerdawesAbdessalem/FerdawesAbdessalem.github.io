@@ -1,6 +1,6 @@
 /* ============================================================
    ANIMATIONS — ciel animé, titre mot par mot, scène 3D, films
-   d'écrans (carrousels), schémas, filtres, frise, pipeline CI/CD,
+   d'écrans (carrousels), schémas, filtres, frise,
    thème clair/sombre, visionneuse plein écran.
    Tout est réduit si le visiteur a demandé « moins d'animations ».
    ============================================================ */
@@ -420,58 +420,6 @@
     });
   }
 
-  /* ---------- 11. Pipeline CI/CD dans le terminal ---------- */
-  function pipeline() {
-    const sec = document.getElementById("pipeline");
-    if (!sec) return;
-    const stages = [...sec.querySelectorAll(".stage")];
-    const list = sec.querySelector(".stages");
-    const term = sec.querySelector(".term-body");
-    const LINES = [
-      [0, "$ git push origin main", "cmd"],
-      [0, "→ pipeline triggered · GitLab CI", "dim"],
-      [1, "✓ build        deps installed · assets built", "ok"],
-      [2, "✓ unit         all tests passed", "ok"],
-      [2, "✓ integration  REST API + database · passed", "ok"],
-      [2, "✓ e2e          Playwright · user journeys passed", "ok"],
-      [3, "✓ report       Allure report published", "ok"],
-      [4, "✓ deploy       released to production", "ok"],
-      [4, "Pipeline passed ✔", "final"]
-    ];
-    const setStage = (s) => {
-      stages.forEach((st, i) => { st.classList.toggle("done", i <= s); st.classList.toggle("active", i === s + 1); });
-      list.style.setProperty("--p", s < 0 ? 0 : s / (stages.length - 1));
-    };
-    if (REDUCE) {
-      LINES.forEach(([, t, c]) => { const d = document.createElement("div"); d.className = `tl ${c}`; d.textContent = t; term.appendChild(d); });
-      setStage(stages.length - 1);
-      return;
-    }
-    let runId = 0, visible = false;
-    async function run() {
-      const id = ++runId;
-      term.textContent = ""; setStage(-1); stages[0].classList.add("active");
-      await sleep(500);
-      for (const [s, text, cls] of LINES) {
-        if (id !== runId) return;
-        const div = document.createElement("div");
-        div.className = `tl ${cls}`;
-        term.appendChild(div);
-        if (cls === "cmd") {
-          for (let k = 1; k <= text.length; k++) { if (id !== runId) return; div.textContent = text.slice(0, k); await sleep(45); }
-          await sleep(350);
-        } else { div.textContent = text; await sleep(cls === "ok" ? 650 : 450); }
-        setStage(s);
-      }
-      await sleep(5000);
-      if (id === runId && visible) run();
-    }
-    onView(sec, (v) => {
-      if (v && !visible) { visible = true; run(); }
-      else if (!v && visible) { visible = false; runId++; }
-    }, { threshold: 0.3 });
-  }
-
   /* ---------- 12. Thème clair / sombre ---------- */
   function theme() {
     const b = document.getElementById("theme-btn");
@@ -517,7 +465,6 @@
   }
   sky();
   stage();
-  pipeline();
   magnetic();
   theme();
   menu();
