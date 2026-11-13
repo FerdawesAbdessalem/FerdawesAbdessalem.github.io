@@ -214,9 +214,11 @@ window.CONTENT = {
         ["assets/work/secure-appart/new-2.webp", { fr: "Création de compte", en: "Sign up", it: "Registrazione" }],
         ["assets/work/secure-appart/new-3.webp", { fr: "Vérification de l'e-mail par code", en: "E-mail verification code", it: "Verifica e-mail con codice" }],
         ["assets/work/secure-appart/new-5.webp", { fr: "Choix du profil", en: "Choose a profile", it: "Scelta del profilo" }],
-        ["assets/work/secure-appart/3.webp", { fr: "Dépôt de la pièce d'identité", en: "ID document upload", it: "Caricamento documento d'identità" }],
-        ["assets/work/secure-appart/7.webp", { fr: "Score du dossier calculé par l'IA", en: "AI-computed application score", it: "Punteggio calcolato dall'IA" }],
-        ["assets/work/secure-appart/8.webp", { fr: "Accueil — dernières annonces", en: "Home — latest listings", it: "Home — ultimi annunci" }],
+        ["assets/work/secure-appart/new-9.webp", { fr: "Préférences de recherche", en: "Search preferences", it: "Preferenze di ricerca" }],
+        ["assets/work/secure-appart/new-6.webp", { fr: "Dépôt de la pièce d'identité", en: "ID document upload", it: "Caricamento documento d'identità" }],
+        ["assets/work/secure-appart/new-7.webp", { fr: "Score du dossier calculé par l'IA", en: "AI-computed application score", it: "Punteggio calcolato dall'IA" }],
+        ["assets/work/secure-appart/new-8.webp", { fr: "Accueil — dernières annonces", en: "Home — latest listings", it: "Home — ultimi annunci" }],
+        ["assets/work/secure-appart/new-10.webp", { fr: "Propositions de locataires pour le propriétaire", en: "Tenant proposals for the owner", it: "Proposte di inquilini per il proprietario" }],
         ["assets/work/secure-appart/new-4.webp", { fr: "Mot de passe oublié", en: "Forgot password", it: "Password dimenticata" }]
       ], note: { fr: "écrans réels de l'application mobile", en: "real screens of the mobile app", it: "schermate reali dell'app mobile" } } },
 
