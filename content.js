@@ -336,11 +336,11 @@ window.CONTENT = {
       place: { fr: "Malissard, France", en: "Malissard, France", it: "Malissard, Francia" },
       dates: { fr: "Févr. 2025 — juil. 2025", en: "Feb 2025 — Jul 2025", it: "Feb 2025 — lug 2025" },
       text: {
-        fr: "Backend Django de Secure Appart, plateforme de location assistée par IA : API pour l'app mobile, OCR et Random Forest sur les dossiers locataires, MongoDB, GitLab CI/CD.",
-        en: "Django backend for Secure Appart, an AI-assisted rental platform: APIs for the mobile app, OCR and Random Forest on tenant files, MongoDB, GitLab CI/CD.",
-        it: "Backend Django di Secure Appart, piattaforma di locazione assistita da IA: API per l'app mobile, OCR e Random Forest sui fascicoli, MongoDB, GitLab CI/CD."
+        fr: "Backend Django de Secure Appart, plateforme de location assistée par IA : API pour l'app mobile Flutter, OCR et Random Forest sur les dossiers locataires, MongoDB, GitLab CI/CD.",
+        en: "Django backend for Secure Appart, an AI-assisted rental platform: APIs for the Flutter mobile app, OCR and Random Forest on tenant files, MongoDB, GitLab CI/CD.",
+        it: "Backend Django di Secure Appart, piattaforma di locazione assistita da IA: API per l'app mobile Flutter, OCR e Random Forest sui fascicoli, MongoDB, GitLab CI/CD."
       },
-      tags: ["Django", "Python", "MongoDB", "GitLab CI", "OCR"] },
+      tags: ["Django", "Python", "Flutter", "MongoDB", "GitLab CI", "OCR"] },
 
     { title: { fr: "Diplôme d'ingénieur en télécommunications, ENISo", en: "Telecommunications engineering degree, ENISo", it: "Laurea in Ingegneria delle Telecomunicazioni, ENISo" },
       place: { fr: "Sousse, Tunisie", en: "Sousse, Tunisia", it: "Sousse, Tunisia" },
